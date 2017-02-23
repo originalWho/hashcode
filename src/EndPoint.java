@@ -21,4 +21,16 @@ public class EndPoint {
     public void addRequestToVideo(int video, int request) {
         videoRequests.put(video, request);
     }
+
+    public int getLatencyDataCenter() {
+        return latencyDataCenter;
+    }
+
+    public HashMap<Integer, Integer> getCacheServersLatency() {
+        return cacheServersLatency;
+    }
+
+    public HashMap<Integer, Integer> getVideoRequests() {
+        return videoRequests;
+    }
 }
