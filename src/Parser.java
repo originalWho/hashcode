@@ -6,19 +6,18 @@ import java.util.Scanner;
  * Created by Artur on 2/23/17.
  */
 public class Parser implements ParserI {
-    File file;
-    Scanner scanner;
-    int numberOfVideos;
-    int numberOfEndpoints;
-    int numberOfRequestDescriptions;
-    int numberOfCacheServers;
-    int capacityOfCacheServers;
-    int[] videoSizes;
-    ArrayList<EndPoint> endPoints;
+    private Scanner scanner;
+    private int numberOfVideos;
+    private int numberOfEndpoints;
+    private int numberOfRequestDescriptions;
+    private int numberOfCacheServers;
+    private int capacityOfCacheServers;
+    private int[] videoSizes;
+    private ArrayList<EndPoint> endPoints;
 
     @Override
     public boolean setFile(String fileName) {
-        file = new File(fileName);
+        File file = new File(fileName);
         try {
             scanner = new Scanner(file);
         } catch (Exception e) {
@@ -99,7 +98,7 @@ public class Parser implements ParserI {
 
     @Override
     public int getCapacityOfCacheServer() {
-        return numberOfCacheServers;
+        return capacityOfCacheServers;
     }
 
     @Override
